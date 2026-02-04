@@ -10,7 +10,7 @@ body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%);
+    background: url('/background.jpg') center/cover no-repeat fixed;
     color: #be185d;
     overflow: hidden;
 }
