@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+console.log("Valentine App Script running... ❤️");
+
 const FloatingHearts = () => {
   const [hearts, setHearts] = useState<{ id: number; left: number; duration: number; size: number }[]>([]);
 
