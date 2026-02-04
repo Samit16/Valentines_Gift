@@ -94,7 +94,7 @@ export default function Page() {
               alt="Requesting bear"
             />
             <h1 className="my-8 text-4xl md:text-5xl font-pacifico text-center text-pink-700 drop-shadow-md">
-              Will you be my Valentine?
+              Will you be my Valentine Rucha?
             </h1>
             <div className={`flex flex-wrap items-center justify-center gap-4 ${noCount > 5 ? 'flex-col' : ''}`}>
               <button
