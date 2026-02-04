@@ -69,10 +69,10 @@ export default function Page() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center p-4">
+    <div className="relative flex min-h-screen flex-col items-center justify-center p-4 overflow-hidden">
       <FloatingHearts />
 
-      <div className="z-10 bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/50 shadow-2xl flex flex-col items-center max-w-lg w-full">
+      <div className={`z-10 bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/50 shadow-2xl flex flex-col items-center w-full transition-all duration-300 ${noCount > 10 ? 'max-w-none h-full justify-center' : 'max-w-lg'}`}>
         {yesPressed ? (
           <div className="flex flex-col items-center animate-bounce">
             <img
@@ -81,7 +81,7 @@ export default function Page() {
               alt="Cute bear kissing"
             />
             <div className="my-6 text-4xl md:text-6xl font-bold font-pacifico text-pink-600 drop-shadow-lg text-center">
-              WOOOOOO!!! I love you pookie!! ;)) ❤️
+              WOOOOOO!!! I love you pookie!! ❤️
             </div>
           </div>
         ) : (
@@ -94,10 +94,10 @@ export default function Page() {
             <h1 className="my-8 text-4xl md:text-5xl font-pacifico text-center text-pink-700 drop-shadow-md">
               Will you be my Valentine?
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className={`flex flex-wrap items-center justify-center gap-4 ${noCount > 5 ? 'flex-col' : ''}`}>
               <button
-                className="rounded-full bg-green-500 px-8 py-4 font-bold text-white shadow-lg hover:bg-green-600 active:scale-95 transition-all duration-200"
-                style={{ fontSize: Math.min(yesButtonSize, 100) }}
+                className="rounded-full bg-green-500 px-8 py-4 font-bold text-white shadow-2xl hover:bg-green-600 active:scale-95 transition-all duration-200 z-20"
+                style={{ fontSize: yesButtonSize }}
                 onClick={() => setYesPressed(true)}
               >
                 Yes
